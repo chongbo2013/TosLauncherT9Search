@@ -1,5 +1,6 @@
 package t9.launcher.tos.com.toslaunchert9search;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 /**
@@ -7,7 +8,7 @@ import android.os.Bundle;
  * tos launcher
  * ferris 2016年7月15日 12:22:20
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

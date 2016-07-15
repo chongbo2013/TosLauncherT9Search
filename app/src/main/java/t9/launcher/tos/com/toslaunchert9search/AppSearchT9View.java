@@ -80,6 +80,13 @@ public class AppSearchT9View extends ViewGroup implements
             View v =getChildAt(i);
             if(v.getId()==R.id.dial_delete_btn){
                 mDialDeleteBtn = (ImageView) v;
+                mDialDeleteBtn.setOnLongClickListener(new OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        deleteAllDialCharacter();
+                        return true;
+                    }
+                });
             }
             v.setOnClickListener(this);
         }
@@ -181,7 +188,19 @@ public class AppSearchT9View extends ViewGroup implements
         }
 
     }
-
+    public void deleteAllDialCharacter() {
+        String curInputStr = mT9InputEt.getText().toString();
+        if (curInputStr.length() > 0) {
+            String deleteCharacter = curInputStr.substring(0,
+                    curInputStr.length());
+            if (null != mOnT9TelephoneDialpadView) {
+                mOnT9TelephoneDialpadView
+                        .onDeleteDialCharacter(deleteCharacter);
+            }
+            mT9InputEt.setText("");
+//            ViewUtil.hideView(mDialDeleteBtn);
+        }
+    }
     public void deleteSingleDialCharacter() {
         String curInputStr = mT9InputEt.getText().toString();
         if (curInputStr.length() > 0) {
