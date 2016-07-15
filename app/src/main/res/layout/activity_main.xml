@@ -3,14 +3,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="t9.launcher.tos.com.toslaunchert9search.MainActivity">
+
+>
+    <t9.launcher.tos.com.toslaunchert9search.LineTextView
+        android:id="@+id/search_result_prompt_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:gravity="center"
+        android:text="457845"
+        android:layout_below="@+id/t9_search_grid_view"
+        android:layout_centerHorizontal="true"
+ />
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/search_emmpy"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:gravity="center"
+        android:text="拼音、语音查找应用"
+        android:layout_above="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <GridView
+        android:id="@+id/t9_search_grid_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:columnWidth="80dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="24dp"
+        android:visibility="gone"
+        android:layout_above="@+id/view" />
+
+
+    <t9.launcher.tos.com.toslaunchert9search.AppSearchT9View
+        android:layout_width="match_parent"
+        android:layout_height="280dip"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/view">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png01"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png02"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png03"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png04"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png05"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png06"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png07"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png08"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png09"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/t9png10"
+            android:text="test"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png11"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:gravity="center"
+            android:background="@drawable/t9png12"/>
+
+    </t9.launcher.tos.com.toslaunchert9search.AppSearchT9View>
 </RelativeLayout>
